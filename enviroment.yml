@@ -2,4 +2,4 @@ name: main
 dependencies:
   - numpy
   - scipy
-  - skimage
+  - scikit-image
