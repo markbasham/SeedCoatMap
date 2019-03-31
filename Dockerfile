@@ -4,7 +4,7 @@ FROM continuumio/miniconda3
 WORKDIR /home/me/dev/
 
 # copy necessary files.
-COPY ./*.* ./
+COPY ./* ./
 
 # install packages.
 RUN conda env create -f enviroment.yaml
