@@ -7,7 +7,7 @@ WORKDIR /home/me/dev/
 COPY ./*.* ./
 
 # install packages.
-RUN conda env create -f env.yaml
+RUN conda env create -f enviroment.yaml
 
 # run script.
 CMD python my_script.py
