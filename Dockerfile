@@ -13,5 +13,11 @@ RUN ls
 # install packages.
 RUN conda env create -f enviroment.yml
 
+#Activate the enviroment
+RUN source activate main
+
+#update the pythonpath
+ENV PYTHONPATH="$PYTHONPATH:/app
+
 # run script.
-CMD python my_script.py
+ENTRYPOINT [ "python", "seedcoatmap.py"]
