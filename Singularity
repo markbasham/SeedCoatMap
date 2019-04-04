@@ -5,11 +5,11 @@ From: continuumio/miniconda3
 
 %post
 # install packages.
-# conda env create -f enviroment.yml
+conda env create -f /enviroment.yml
 
 #Activate the enviroment
-# /bin/bash -c "source activate main"
+/bin/bash -c "source activate main"
 
 %runscript
 ls -l
-exec python seedcoatmap.py "$@"
+exec python /src/seedcoatmap.py "$@"
