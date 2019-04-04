@@ -8,7 +8,7 @@ From: continuumio/miniconda3
 /opt/conda/bin/conda env create -f /enviroment.yml
 
 #Activate the enviroment
-. /opt/conda/bin/activate main"
+. /opt/conda/bin/activate main
 
 %runscript
 ls -l
