@@ -5,10 +5,10 @@ From: continuumio/miniconda3
 
 %post
 # install packages.
-/bin/bash conda env create -f /enviroment.yml
+/opt/conda/bin/conda env create -f /enviroment.yml
 
 #Activate the enviroment
-/bin/bash -c "source activate main"
+. /opt/conda/bin/activate main"
 
 %runscript
 ls -l
