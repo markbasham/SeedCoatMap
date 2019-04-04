@@ -28,4 +28,5 @@ def main(template="/mnt/gpfs03/markb/87470/centered/recon*.tif",
     com = center_of_mass(data_filt>background_threshold)
 
 if __name__ == '__main__':
-    main()
+    print("Seems to be working")
+    #main()
