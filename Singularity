@@ -8,4 +8,5 @@ From: continuumio/miniconda3
 /opt/conda/bin/conda env create -f /enviroment.yml
 
 %runscript
+. /opt/conda/bin/activate main
 exec python /src/seedcoatmap.py "$@"
