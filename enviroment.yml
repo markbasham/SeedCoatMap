@@ -1,4 +1,4 @@
-name: base
+name: main
 dependencies:
   - numpy
   - scipy
