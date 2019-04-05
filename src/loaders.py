@@ -5,6 +5,7 @@ Created on 29 Mar 2019
 '''
 from numpy import dstack
 from skimage import io
+from h5py import File
 
 
 def load_image_stack(template,
@@ -23,3 +24,14 @@ def load_image_stack(template,
         print(count)
         count += 1
     return dstack(stack)
+
+
+def save_data(filename, dataname, data):
+    f = File(filename, 'w')
+    f.create_dataset(dataname, data.shape, data.dtype, data)
+    f.close()
+
+
+def load_data(filename, dataname):
+    f = File(filename, 'r')
+    return f[dataname][...]
