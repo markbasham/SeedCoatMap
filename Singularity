@@ -9,4 +9,4 @@ From: continuumio/miniconda3
 
 %runscript
 . /opt/conda/bin/activate main
-exec python /src/seedcoatmap.py "$@"
+exec /opt/conda/envs/main/bin/python /src/seedcoatmap.py "$@"
