@@ -4,7 +4,7 @@ Created on 29 Mar 2019
 @author: ssg37927
 '''
 
-from numpy import meshgrid, linspace, concatenate, zeros_like, sqrt
+from numpy import meshgrid, linspace, concatenate, zeros_like, sqrt, int16
 
 
 def build_cubemap_vector_array(com, mesh_size=10,
