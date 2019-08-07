@@ -7,15 +7,10 @@ Created on 29 Mar 2019
 from numpy import meshgrid, linspace, concatenate, zeros_like, sqrt
 
 
-def build_cubemap_vector_array(com, mesh_size=10,
-                               min_radius=200,
-                               max_radius=800,
-                               radial_steps=1000):
-    
+def build_cubemap_vector_array(mesh_size=10):
     # create the tiles to build the x, y and z
-    xt, yt , rt = meshgrid(linspace(-1.0, 1.0, mesh_size),
-                           linspace(-1.0, 1.0, mesh_size),
-                           linspace(min_radius, max_radius, radial_steps))
+    xt, yt = meshgrid(linspace(-1.0, 1.0, mesh_size),
+                      linspace(-1.0, 1.0, mesh_size))
     zt = zeros_like(xt)
     ot = zt+1.0
     nt = zt-1.0
@@ -35,11 +30,6 @@ def build_cubemap_vector_array(com, mesh_size=10,
          concatenate((xt, ot, xt[:, ::-1], nt), axis=1),
          concatenate((zt, yt[::-1, :], zt, zt), axis=1)))
 
-    rmap = concatenate(
-        (concatenate((rt, rt, rt, rt), axis=1),
-         concatenate((rt, rt, rt, rt), axis=1),
-         concatenate((rt, rt, rt, rt), axis=1)))
+    scale= sqrt(xmap**2+ymap**2+zmap**2)
 
-    scale = sqrt(xmap**2 + ymap**2 + zmap**2)
-
-    return (((xmap/scale)*rmap)+com[0], ((ymap/scale)*rmap)+com[1], ((zmap/scale)*rmap)+com[2], rmap)
+    return (xmap/scale, ymap/scale, zmap/scale)
