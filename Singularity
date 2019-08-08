@@ -5,8 +5,8 @@ From: continuumio/miniconda3
 
 %post
 # install browser
-apt-get update -y
-apt-get upgrade -y
+#apt-get update -y
+#apt-get upgrade -y
 apt-get install firefox-esr
 
 # install packages.
