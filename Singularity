@@ -5,7 +5,7 @@ From: continuumio/miniconda3
 
 %post
 # install browser
-apt install --assume-yes chromium-browser
+# apt install --assume-yes chromium-browser
 
 # install packages.
 /opt/conda/bin/conda env create -f /enviroment.yml
