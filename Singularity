@@ -5,9 +5,9 @@ From: continuumio/miniconda3
 
 %post
 # install browser
-apt update -y
-apt upgrade -y
-apt install firefox
+apt-get update -y
+apt-get upgrade -y
+apt-get install firefox
 
 # install packages.
 /opt/conda/bin/conda env create -f /enviroment.yml
