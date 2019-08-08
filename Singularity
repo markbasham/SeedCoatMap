@@ -7,7 +7,7 @@ From: continuumio/miniconda3
 # install browser
 #apt-get update -y
 #apt-get upgrade -y
-apt-get install firefox-esr
+apt-get install firefox-esr -y
 
 # install packages.
 /opt/conda/bin/conda env create -f /enviroment.yml
